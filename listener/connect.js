@@ -60,8 +60,12 @@ module.exports = client => {
 		}
 	}
 	else if(userChoice == "edt"){
+<<<<<<< HEAD
 		const marks = await session.timetable()
 		console.log(marks);
+=======
+		const marks = await session.timetable();
+>>>>>>> d4f9b1f9eb1e44abd83ae9853bcbb9e3b49c0418
 		for(var time in marks){
 			exampleEmbed.addField(`**${time.subject} - ${time.teacher}**`, `=> **${time.room}**`, false);	
 		}	
