@@ -18,7 +18,7 @@ module.exports = client => {
 			if(nomMatiere == marks.subjects[i].name){
 				for(var n = 0; n < marks.subjects[i].marks.length; n++){
 					noteMatiere += ` *De: ${marks.subjects[i].marks[n].title}* :  __` +
-					`${marks.subjects[i].marks[n].res}/${marks.subjects[i].marks[n].scale}__ \n`;
+					`${marks.subjects[i].marks[n].value}/${marks.subjects[i].marks[n].scale}__ \n`;
 				}
 			//Sinon on bascule sur une autre, pour classifiez
 			}else{
@@ -26,8 +26,8 @@ module.exports = client => {
 				noteMatiere = ""
 				for(var n = 0; n < marks.subjects[i].marks.length; n++){
 					noteMatiere += ` *De: ${marks.subjects[i].marks[n].title}* : ` +
-					` __${marks.subjects[i].marks[n].res}/${marks.subjects[i].marks[n].scale}__ \n`;
-				}
+					` __${marks.subjects[i].marks[n].value}/${marks.subjects[i].marks[n].scale}__ \n`;
+				}	
 			}
 			exampleEmbed.addField(` Notes en ${nomMatiere} -> ${marks.subjects[i].averages.student} /` +
 			` (classe) ${marks.subjects[i].averages.studentClass} `, `${noteMatiere}`);
@@ -60,9 +60,10 @@ module.exports = client => {
 		}
 	}
 	else if(userChoice == "edt"){
-		const marks = await.session.timetable
+		const marks = await session.timetable()
+		console.log(marks);
 		for(var time in marks){
-			exampleEmbed.addField(`**${time.subject} - ${time.teacher}**`, `=> **${time.room}**`, false))	
+			exampleEmbed.addField(`**${time.subject} - ${time.teacher}**`, `=> **${time.room}**`, false);	
 		}	
 	}else if(userChoice == "infos") return await session.infos();
 	else exampleEmbed.addField(`Je suis sur la session de ${session.user.name}`, `${session.user.class}`);
