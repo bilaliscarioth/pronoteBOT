@@ -62,7 +62,7 @@ module.exports = client => {
 	else if(userChoice == "edt"){
 		const marks = await session.timetable
 		for(var time in marks){
-			exampleEmbed.addField(`**${time.subject} - ${time.teacher}**`, `=> **${time.room}**`, false))	
+			exampleEmbed.addField(`**${time.subject} - ${time.teacher}**`, `=> **${time.room}**`, false);	
 		}	
 	}else if(userChoice == "infos") return await session.infos();
 	else exampleEmbed.addField(`Je suis sur la session de ${session.user.name}`, `${session.user.class}`);
