@@ -27,7 +27,7 @@ module.exports = client => {
 				for(var n = 0; n < marks.subjects[i].marks.length; n++){
 					noteMatiere += ` *De: ${marks.subjects[i].marks[n].title}* : ` +
 					` __${marks.subjects[i].marks[n].value}/${marks.subjects[i].marks[n].scale}__ \n`;
-				}	
+         }
 			}
 			exampleEmbed.addField(` Notes en ${nomMatiere} -> ${marks.subjects[i].averages.student} /` +
 			` (classe) ${marks.subjects[i].averages.studentClass} `, `${noteMatiere}`);
@@ -60,20 +60,7 @@ module.exports = client => {
 		}
 	}
 	else if(userChoice == "edt"){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		const marks = await session.timetable()
-		console.log(marks);
-=======
-		const marks = await session.timetable();
->>>>>>> d4f9b1f9eb1e44abd83ae9853bcbb9e3b49c0418
-=======
-		const marks = await session.timetable();
->>>>>>> d4f9b1f9eb1e44abd83ae9853bcbb9e3b49c0418
-=======
-		const marks = await session.timetable
->>>>>>> newversion
 		for(var time in marks){
 			exampleEmbed.addField(`**${time.subject} - ${time.teacher}**`, `=> **${time.room}**`, false);	
 		}	
