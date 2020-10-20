@@ -60,7 +60,7 @@ module.exports = client => {
 		}
 	}
 	else if(userChoice == "edt"){
-		const marks = await.session.timetable
+		const marks = await session.timetable
 		for(var time in marks){
 			exampleEmbed.addField(`**${time.subject} - ${time.teacher}**`, `=> **${time.room}**`, false))	
 		}	
