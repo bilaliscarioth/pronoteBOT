@@ -26,16 +26,8 @@ module.exports = client => {
 				noteMatiere = ""
 				for(var n = 0; n < marks.subjects[i].marks.length; n++){
 					noteMatiere += ` *De: ${marks.subjects[i].marks[n].title}* : ` +
-<<<<<<< HEAD
-					` __${marks.subjects[i].marks[n].value}/${marks.subjects[i].marks[n].scale}__ \n`;
-				}	
-||||||| d528882
-					` __${marks.subjects[i].marks[n].res}/${marks.subjects[i].marks[n].scale}__ \n`;
-				}
-=======
 					` __${marks.subjects[i].marks[n].value}/${marks.subjects[i].marks[n].scale}__ \n`;
 				}
->>>>>>> newversion
 			}
 			exampleEmbed.addField(` Notes en ${nomMatiere} -> ${marks.subjects[i].averages.student} /` +
 			` (classe) ${marks.subjects[i].averages.studentClass} `, `${noteMatiere}`);
