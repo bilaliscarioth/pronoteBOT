@@ -28,6 +28,7 @@ module.exports = client => {
 					noteMatiere += ` *De: ${marks.subjects[i].marks[n].title}* : ` +
 					` __${marks.subjects[i].marks[n].value}/${marks.subjects[i].marks[n].scale}__ \n`;
 				}
+         }
 			}
 			exampleEmbed.addField(` Notes en ${nomMatiere} -> ${marks.subjects[i].averages.student} /` +
 			` (classe) ${marks.subjects[i].averages.studentClass} `, `${noteMatiere}`);
