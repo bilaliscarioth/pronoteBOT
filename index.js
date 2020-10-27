@@ -17,20 +17,16 @@ client.password = null;
 /*
  *Pour voir si une partie est déjà commencer
  */
-client.waitList = true;
 client.partyCreate = false;
-client.composition = ['LG', 'LG', 'CHASSEUR', 'SORCIERE', 'VOYANTE', 'SIMPLE VG'];
-client.creatorID = "";
-client.roleUsers = new Map();
 client.debugLog = false;
+client.creatorId = "";
 
 /*
- *
+ *  On ajoute les listeners;
  */
 
-
-
-require('./listener/connect.js')(client)
+require('./listener/lg.js')(client);
+require('./listener/connect.js')(client);
 
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
