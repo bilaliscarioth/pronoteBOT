@@ -5,8 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "discord.js": "^12.4.1",
+    "marked": "^1.2.2",
+    "node-opus": "^0.3.3",
+    "opusscript": "0.0.7",
     "pronote-api": "^2.2.0",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.3.0",
+    "ytdl-core": "^4.0.0"
   },
   "devDependencies": {},
   "scripts": {
