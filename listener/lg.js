@@ -21,7 +21,7 @@ module.exports = client => {
                    return member.send("C'est donc ça la méditation :thinking:");
                 }else if(reaction.emoji.name == "🖤"){
                     var embedTokill = new DiscordEmbed({title: "Tuer...", description: "Vous êtes sur le point de tuer une personne..."});
-                    players.forEach(function(key, id)=> { 
+                    players.forEach(function(key, id) { 
                         embedToKill.addField(key, "<@" + id + ">");
                     });
 
@@ -33,16 +33,16 @@ module.exports = client => {
     }
     //Le joueur ou la voyante veut voir le rôle
     client.voteVoyant = async(member, players) => {
-        member.send({title: ":eye: - Quel joueur voulez-vous, observez ?", color "RED", 
-            description:"Votre don de voyante vous donne la chance d'observer des gens :eyes:"}).then(message => {
+        member.send({title: ":eye: - Quel joueur voulez-vous, observez ?", color: "RED", 
+        description:"Votre don de voyante vous donne la chance d'observer des gens :eyes:"}).then(message => {
                 
             })
     }
     //Le vote pour le maire
     client.voteMaire = async(channel, members) => {
-        var embedMaire = new Discord.MessageEmbed({title: "La DEMO-QUOI?! LA DEMOCRATIE!", color: "YELLOW"},
-        description: "La démocratie... mieux vaut une bonne vielle terreur à la Robespierre, ouais !");
-        players.forEach(function(key, id)=> { 
+        var embedMaire = new Discord.MessageEmbed({title: "La DEMO-QUOI?! LA DEMOCRATIE!", color: "YELLOW",
+        description: "La démocratie... mieux vaut une bonne vielle terreur à la Robespierre, ouais !"});
+        players.forEach((key, id)=> { 
             embedToKill.addField(key, "<@" + id + ">");
         });
         channel.send("Qui voulez-vous, voter pour qu'il devienne maire ? ", embedMaire).then(message => {

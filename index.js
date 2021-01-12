@@ -11,19 +11,7 @@ const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('
  */
 client.url = 'https://0840044s.index-education.net/pronote/';
 client.jourSemaine = ['Samedi','Lundi', 'Mardi', 'Mercredi', 'Jeudi','Vendredi'];
-client.username = null;
-client.password = null;
-
-/*
- *Pour voir si une partie est déjà commencer
- */
-client.partyCreate = false;
-client.debugLog = false;
-client.creatorId = "";
-
-/*
- *  On ajoute les listeners;
- */
+client.listeSession = new Map();
 
 require('./listener/lg.js')(client);
 require('./listener/connect.js')(client);
@@ -35,9 +23,9 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
 	client.user.setActivity("Je suis TuxBot, le bot qui vit avec FSF! ;)");
-    const channel = client.channels.cache.find(channel => channel.name === "log")
-    channel.bulkDelete(80);
-    channel.send({embed: {title: "Démarrage de Tuxbot",description: "Instance lancé sur " + socket.hostname()+ " :smile:"}})
+    //const channel = client.channels.cache.find(channel => channel.name === "log")
+    //channel.bulkDelete(80);
+    //channel.send({embed: {title: "Démarrage de Tuxbot",description: "Instance lancé sur " + socket.hostname()+ " :smile:"}})
     
 });
 
