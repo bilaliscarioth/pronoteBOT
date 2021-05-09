@@ -23,11 +23,12 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
 	client.user.setActivity("Je suis TuxBot, le bot qui vit avec FSF! ;)");
-  const channel = client.channels.cache.find(channel => channel.name === "pwned-devoirs")
-  channel.bulkDelete(80);
 	setInterval(async () => { 
+		const exampleEmbed = new Discord.MessageEmbed();
+		const channel = client.channels.cache.find(channel => channel.name === "pwned-devoirs")
 		for(const [key, value] of client.listeSession){
-			const marks = await session.homeworks();
+			console.log(key);
+			const marks = await value.homeworks();
 				exampleEmbed.setTitle('Devoirs');
 				var devoirJour = "";
 				var Jour = marks[0].for;
@@ -49,9 +50,10 @@ client.once('ready', () => {
 						devoirJour = "";
 					}
 				}
+  		channel.bulkDelete(80);
+			channel.send(exampleEmbed);	
 		}
-	}, 60000*60);
-    
+	}, 60000);  
 });
 
 client.on('message', message => {
