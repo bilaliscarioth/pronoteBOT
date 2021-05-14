@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Cypherdex",
+        "desc": "Un holotome conçu pour les Casterwill à l'aide d'un sortilège.",
+        "image": "https://vignette.wikia.nocookie.net/huntik/images/a/ac/Cypherdex.jpg/revision/latest/scale-to-width-down/250?cb=20090511201709"
+    },
+    {
+        "name": "Teknonomicon",
+        "desc": "Un holotome noir conçu rien que pour les hommes de haut rangs du siège de l'Organasation.",
+        "image": "https://vignette.wikia.nocookie.net/huntik/images/0/0c/Teknonomicon.png/revision/latest/scale-to-width-down/250?cb=20130727032055"
+    },
+    {
+        "name": "Amulette de la volonté",
+        "desc": "L'amulette d'Overlos, pour pouvoir l'invoquer il vous faut faire la cérénomie avec les trois titans légendaires.",
+        "image": "https://vignette.wikia.nocookie.net/huntik/images/7/75/Amulet_of_Will.jpg/revision/latest/scale-to-width-down/250?cb=20120601203036"
+    },
+    {
+        "name": "Holotome",
+        "desc": "Un holotome vous permet d'avoir des informations sur des titans ou sur un lieux.\n Dans l'épisode 21 de la saison 1, nous remarquons qu'il est aussi capable avec assez de données\n de remettre en évidence la scène. \n Dans l'épisode 11 saison 1, il permet aussi de vous trouver une île la plus proche si vous avez un gps qui est connecté.",
+        "image": "https://vignette.wikia.nocookie.net/huntik/images/c/c0/Holotome.png/revision/latest/scale-to-width-down/250?cb=20130727032115"
+    },
+    {
+        "name": "Appel lame",
+        "desc": "L'épée des champions des Casterwill, cette épée possède une 'âme' elle marchera si seulement Lord Casterwill vous la donne. \n {PS: L'amulette de Pendragon s'y trouve à l'intérieur}",
+        "image": "https://vignette.wikia.nocookie.net/huntik/images/8/84/Willblade.png/revision/latest/scale-to-width-down/250?cb=20190205232508"
+    },
+    {
+        "name": "Calle mort",
+        "desc": "Un objet similaire à une amulette basé sur les propriétés de Brise sorts, qui permet d'annuler un sort pendant un long moment",
+        "image": "https://vignette.wikia.nocookie.net/huntik/images/8/8a/S1E13_Deadcalm.png/revision/latest/scale-to-width-down/250?cb=20120108193037"
+    }
+]
